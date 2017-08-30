@@ -1,13 +1,13 @@
 define list V [ "a", "i", "u", "e", "o" ];
 define list W [ "ei", "ou" ];
-define list Vocal [V, W];
+define list Vocal [V, V, V, W, W];
 define list Y [ "ya", "yu", "yuu", "yo", "you" ];
 define list Cyable [ "m", "n", "b", "k", "g", "r"];
-define list C [ Cyable, "s","z" ];
+define list C [ Cyable, Cyable, Cyable, Cyable, Cyable, "s","z" ];
 define list Spec [ "shi", "tsu", "dzu" ];
 
 define seq Sreg : C, Vocal;
-define seq Sregn : C, Vocal, "n";
+define seq Sregn : C, V, "n";
 define seq Sy: Cyable, Y;
 
 define list Syl [ Sreg, Sreg, Sreg, Sreg, Sregn, Sregn, Sy, Y, Spec ];
