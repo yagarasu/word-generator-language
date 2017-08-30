@@ -1,0 +1,28 @@
+define list Domain [ "hotmail.com", "yahoo.com", "msn.com" ];
+define list NounF [ "prinsesa", "princess", "jenny", "annita", "hada", "faery", "munekita", "pinki", "lady", "linda", "icecream", "cookie", "coco", "channel", "vuitton" ];
+define list NounM [ "angel", "satan", "demonio", "cuervo", "oscuridad", "darkness", "night", "gunshot", "dark", "lord", "draco", "dragon" ];
+define list AdjF [ "bonita", "chula", "bebe", "chikis", "darketa", "kurojitsuji", "sukulenta", "bb", "loka", "nenita", "velvet" ];
+define list AdjM [ "dark", "oscuro", "maldito", "blood", "black", "dark", "sadness", "kurojitsuji", "hellhound", "hell", "velvet", "hellsing" ];
+
+define list NounBands [ "limp_bizkit", "korn", "evanecense", "metal", "storm" ];
+define list NounFandom [ "slytherin", "griffindor", "ravenclaw", "potter", "potterhead", "malfoy" ];
+define list NounOther [ NounBands, NounFandom ];
+
+define list Glue [ "", "_", "-" ];
+
+define list Num [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+define seq Nums: Num, Num, Num;
+define list Year [ "1999", "2000", "95", "97", "90" ];
+
+define list Affix [ "", "", Nums, Year ];
+
+define seq Fem1: NounF, Glue, AdjF, Affix;
+define seq Fem2: NounF, Glue, NounOther, Affix;
+define seq Masc1: NounM, Glue, NounOther, Affix;
+define seq Masc2: NounM, Glue, AdjM, Affix;
+
+define list User [ Fem1,Fem1,Fem1, Fem2, Masc1, Masc2,Masc2,Masc2,Masc2 ];
+
+define seq Mail: User, "@", Domain;
+
+output Mail;
