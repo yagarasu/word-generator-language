@@ -1,0 +1,26 @@
+{
+  "name": "word-generator-language",
+  "version": "1.0.0",
+  "description": "A small language to create words based on patterns created for the Querétaro Software Development Meetup.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:parser": "node_modules/.bin/pegjs --allowed-start-rules spec -o wglParser.js grammar.pegjs",
+    "build:parser:1": "node_modules/.bin/pegjs --allowed-start-rules spec --trace -o wglParser.js grammar1.pegjs",
+    "build:parser:2": "node_modules/.bin/pegjs --allowed-start-rules spec --trace -o wglParser.js grammar2.pegjs",
+    "build:parser:3": "node_modules/.bin/pegjs --allowed-start-rules spec --trace -o wglParser.js grammar3.pegjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagarasu/word-generator-language.git"
+  },
+  "author": "Alexys Hegmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yagarasu/word-generator-language/issues"
+  },
+  "homepage": "https://github.com/yagarasu/word-generator-language#readme",
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  }
+}

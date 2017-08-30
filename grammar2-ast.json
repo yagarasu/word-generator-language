@@ -1,0 +1,137 @@
+{
+  "rules": [
+    {
+      "type": "list",
+      "id": "V",
+      "list": [
+        {
+          "type": "literal",
+          "value": "a"
+        },
+        {
+          "type": "literal",
+          "value": "e"
+        },
+        {
+          "type": "literal",
+          "value": "i"
+        },
+        {
+          "type": "literal",
+          "value": "o"
+        },
+        {
+          "type": "literal",
+          "value": "u"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "id": "C",
+      "list": [
+        {
+          "type": "literal",
+          "value": "b"
+        },
+        {
+          "type": "literal",
+          "value": "p"
+        },
+        {
+          "type": "literal",
+          "value": "t"
+        },
+        {
+          "type": "literal",
+          "value": "d"
+        },
+        {
+          "type": "literal",
+          "value": "k"
+        },
+        {
+          "type": "literal",
+          "value": "g"
+        },
+        {
+          "type": "literal",
+          "value": "m"
+        },
+        {
+          "type": "literal",
+          "value": "n"
+        },
+        {
+          "type": "literal",
+          "value": "r"
+        },
+        {
+          "type": "literal",
+          "value": "l"
+        },
+        {
+          "type": "literal",
+          "value": "s"
+        }
+      ]
+    },
+    {
+      "type": "seq",
+      "id": "Voc",
+      "list": [
+        {
+          "type": "ident",
+          "value": "V"
+        }
+      ]
+    },
+    {
+      "type": "seq",
+      "id": "Simple",
+      "list": [
+        {
+          "type": "ident",
+          "value": "C"
+        },
+        {
+          "type": "ident",
+          "value": "V"
+        }
+      ]
+    },
+    {
+      "type": "seq",
+      "id": "Doub",
+      "list": [
+        {
+          "type": "ident",
+          "value": "Simple"
+        },
+        {
+          "type": "ident",
+          "value": "Simple"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "id": "Word",
+      "list": [
+        {
+          "type": "ident",
+          "value": "Voc"
+        },
+        {
+          "type": "ident",
+          "value": "Simple"
+        },
+        {
+          "type": "ident",
+          "value": "Doub"
+        }
+      ]
+    }
+  ],
+  "output": "Word"
+}
