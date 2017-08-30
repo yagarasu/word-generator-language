@@ -1,0 +1,22 @@
+define list V [ "a", "e", "ë", "i", "o", "u", "y" ];
+define list D [ "ae", "ai", "oe" ];
+define list W [ V, D ];
+
+define list C [ "b", "p", "t", "d", "k", "g", "m", "n", "r", "l", "s" ];
+define list MC [ "mm", "sh", "th", "gh", C ];
+define list IC [ "kh", "rh", C ];
+
+define seq ISyl1 : IC, W;
+define list ISyl [ V, ISyl1 ];
+
+define seq MSyl1 : MC, V;
+define seq MSyl2 : MC, V, C;
+define seq MSyl3 : MC, W;
+define seq MSyl4 : MC, W, C;
+define list MSyl [ "", MSyl1, MSyl2, MSyl3, MSyl4 ];
+
+define list ESyl [ "eth" , "el" , "eus", "os" ];
+
+define seq Name: ISyl, MSyl, ESyl;
+
+output Name;

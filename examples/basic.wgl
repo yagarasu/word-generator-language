@@ -1,0 +1,11 @@
+define list V [ "a", "e", "i", "o", "u" ];
+define list C [ "b", "p", "t", "d", "k", "g",
+                "m", "n", "r", "l", "s", "f" ];
+
+define seq Simple: C, V;
+define seq Double: Simple, Simple;
+define seq Triple: Simple, Simple, Simple;
+
+define list Word [ Simple, Double, Triple ];
+
+output Word;

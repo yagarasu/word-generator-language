@@ -1,0 +1,22 @@
+define list V [ "a", "i", "u", "e", "o" ];
+define list W [ "ei", "ou" ];
+define list Vocal [V, W];
+define list Y [ "ya", "yu", "yuu", "yo", "you" ];
+define list Cyable [ "m", "n", "b", "k", "g", "r"];
+define list C [ Cyable, "s","z" ];
+define list Spec [ "shi", "tsu", "dzu" ];
+
+define seq Sreg : C, Vocal;
+define seq Sregn : C, Vocal, "n";
+define seq Sy: Cyable, Y;
+
+define list Syl [ Sreg, Sreg, Sreg, Sreg, Sregn, Sregn, Sy, Y, Spec ];
+
+define seq One: Syl;
+define seq Two: Syl, Syl;
+define seq Three: Syl, Two;
+define seq Four: Two, Two;
+
+define list Word [ One, Two, Two, Two, Two, Three, Three, Three, Four ];
+
+output Word;

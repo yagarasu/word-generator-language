@@ -1,25 +1,24 @@
 var parser = require('./wglParser');
 
-var rules = `define list V [ "a", "e", "i", "o", "u" ];
-define list C [ "b", "p", "t", "d", "k",
-"g", "m", "n", "r", "l", "s" ];
+var script = '';
 
-define seq Voc: V;
-define seq Simple: C, V;
-define seq Doub: Simple, Simple;
-
-define list Word [ Voc, Simple, Doub ];
-
-output Word;`;
-
-console.log(rules);
-
-var list = [];
-
-var r;
-for (var i = 0; i < 10; i++) {
-  r = parser.parse(rules);
-  list.push(r);
-}
-
-console.log(list);
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+process.stdin.on('error', function (err) {
+  if (err.code === 'EPIPE') return process.exit(1);
+  process.emit('error', err);
+});
+process.stdin.on('data', function (chunk) {
+  script += chunk;
+});
+process.stdin.on('end', function () {
+  // Process
+  script = script.trim();
+  console.log('Script:\n' + script + '\n\nOutputs:');
+  var r;
+  for (var i = 0; i < 10; i++) {
+    r = parser.parse(script);
+    console.log('\t- ' + r);
+  }
+  process.exit(0);
+});
