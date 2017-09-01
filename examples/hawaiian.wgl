@@ -1,0 +1,18 @@
+define list C [ "p", "k", "'", "m", "n", "h", "w", "l" ];
+define list V [ "a", "e", "i", "o", "u", "aa", "ee", "ii", "oo", "uu" ];
+define list W [ "iu", "ei", "eu", "oi", "ou", "ai", "au", "ae", "ao" ];
+
+define seq Syl1 : V;
+define seq Syl2 : C, V;
+define seq Syl3 : W;
+define seq Syl4 : C, W;
+
+define list Syl [ Syl1, Syl1, Syl2, Syl2, Syl2, Syl2, Syl2, Syl2, Syl3, Syl4, Syl4 ];
+
+define seq Word1 : Syl, Syl;
+define seq Word2 : Syl, Syl, Syl;
+define seq Word3 : Syl, Syl, Syl, Syl;
+
+define list Word [ Word1, Word2, Word3 ];
+
+output Word;
