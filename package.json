@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:parser": "node_modules/.bin/pegjs --allowed-start-rules spec -o wglParser.js grammar.pegjs",
-    "build:parser:1": "node_modules/.bin/pegjs --allowed-start-rules spec --trace -o wglParser.js grammar1.pegjs",
-    "build:parser:2": "node_modules/.bin/pegjs --allowed-start-rules spec --trace -o wglParser.js grammar2.pegjs",
-    "build:parser:3": "node_modules/.bin/pegjs --allowed-start-rules spec --trace -o wglParser.js grammar3.pegjs"
+    "build:parser": "node_modules/.bin/pegjs --allowed-start-rules spec -o wglParser.js grammars/grammar.pegjs",
+    "build:parser:1": "node_modules/.bin/pegjs --allowed-start-rules spec --trace -o wglParser.js grammars/grammar1.pegjs",
+    "build:parser:2": "node_modules/.bin/pegjs --allowed-start-rules spec --trace -o wglParser.js grammars/grammar2.pegjs",
+    "build:parser:3": "node_modules/.bin/pegjs --allowed-start-rules spec --trace -o wglParser.js grammars/grammar3.pegjs"
   },
   "repository": {
     "type": "git",
